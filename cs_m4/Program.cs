@@ -22,15 +22,19 @@ namespace cs_m4 {
             int[,] matrixB = new int[a, b];
             int[,] matrixC = new int[a, b];
 
+            int matrixFirstSum = 0;
+
             //Заполнить и вывести матрицу А
             Console.WriteLine($"matrixA:");
             for (int i = 0; i < matrixA.GetLength(0); i++) {
                 for (int j = 0; j < matrixA.GetLength(1); j++) {
                     matrixA[i, j] = r.Next(10);
+                    matrixFirstSum += matrixA[i, j]; 
                     Console.Write ($"{matrixA[i, j]} ");
                 }
                 Console.WriteLine();
             }
+            Console.WriteLine($"Сумма всех элементов matrixA: {matrixFirstSum}");
 
             Console.WriteLine();
 
